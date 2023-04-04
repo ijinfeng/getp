@@ -679,7 +679,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="95" y="-252"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -701,58 +701,48 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="202" y="112"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="getp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="getp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRm-kb-45i">
-                                <rect key="frame" x="60" y="0.0" width="420" height="270"/>
-                                <subviews>
-                                    <customView misplaced="YES" id="WSr-dv-dgd">
-                                        <rect key="frame" x="0.0" y="0.0" width="97" height="270"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="73F-g7-Tcq"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Xru-gG-sWs"/>
-                                        </constraints>
-                                    </customView>
-                                    <customView fixedFrame="YES" id="76B-po-Nzy">
-                                        <rect key="frame" x="98" y="0.0" width="322" height="270"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </customView>
-                                </subviews>
-                                <holdingPriorities>
-                                    <real value="250"/>
-                                    <real value="250"/>
-                                </holdingPriorities>
-                            </splitView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="fbC-EB-2uI">
                                 <rect key="frame" x="0.0" y="0.0" width="60" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="7Hr-ON-buq"/>
                                 </constraints>
                             </customView>
+                            <box borderType="line" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-iL-mnV">
+                                <rect key="frame" x="57" y="-4" width="426" height="276"/>
+                                <view key="contentView" id="fcy-Kw-tyb">
+                                    <rect key="frame" x="3" y="3" width="420" height="270"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </box>
                         </subviews>
                         <constraints>
                             <constraint firstItem="fbC-EB-2uI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="180-mY-Ufv"/>
-                            <constraint firstAttribute="bottom" secondItem="sRm-kb-45i" secondAttribute="bottom" id="Lzo-Hy-fQ2"/>
+                            <constraint firstItem="wFy-iL-mnV" firstAttribute="leading" secondItem="fbC-EB-2uI" secondAttribute="trailing" id="7SU-mn-K3E"/>
                             <constraint firstItem="fbC-EB-2uI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="P5m-Lm-6vE"/>
-                            <constraint firstItem="sRm-kb-45i" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ZS8-Nu-u55"/>
-                            <constraint firstAttribute="trailing" secondItem="sRm-kb-45i" secondAttribute="trailing" id="lHi-s3-aMQ"/>
+                            <constraint firstAttribute="bottom" secondItem="wFy-iL-mnV" secondAttribute="bottom" id="jAO-Ff-MeI"/>
+                            <constraint firstAttribute="trailing" secondItem="wFy-iL-mnV" secondAttribute="trailing" id="pgh-40-gQd"/>
+                            <constraint firstItem="wFy-iL-mnV" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="rVh-uw-t9r"/>
                             <constraint firstAttribute="bottom" secondItem="fbC-EB-2uI" secondAttribute="bottom" id="tGz-Ju-blW"/>
-                            <constraint firstItem="sRm-kb-45i" firstAttribute="leading" secondItem="fbC-EB-2uI" secondAttribute="trailing" id="yNM-lW-qb2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentBox" destination="wFy-iL-mnV" id="zWm-dS-cAP"/>
+                        <outlet property="toolBar" destination="fbC-EB-2uI" id="yeC-RN-NCs"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="697"/>
+            <point key="canvasLocation" x="77" y="687"/>
         </scene>
     </scenes>
 </document>

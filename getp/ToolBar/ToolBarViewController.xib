@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ToolBarViewController" customModule="getp" customModuleProvider="target">
+            <connections>
+                <outlet property="projectsButton" destination="Rkw-p5-qWW" id="9eW-XP-v3q"/>
+                <outlet property="textLabel" destination="mJI-Bx-qYr" id="ies-rZ-by5"/>
+                <outlet property="toolButton" destination="2jx-dB-4Lb" id="cHa-Mc-LhY"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="361"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Rkw-p5-qWW" userLabel="projects button" customClass="ToolBarButton" customModule="getp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="281" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="wkV-Mh-C8b"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image">
+                            <imageReference key="value" image="display" catalog="system" symbolScale="default" variableValue="0.80000000000000004"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="tip" value="项目"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onClickProject:" target="-2" id="GM2-yV-es7"/>
+                    </connections>
+                </customView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="2jx-dB-4Lb" userLabel="tool button" customClass="ToolBarButton" customModule="getp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="231" width="50" height="50"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="wrench.and.screwdriver.fill" catalog="system"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="tip" value="便捷工具"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onClickTool:" target="-2" id="72H-uk-yM1"/>
+                    </connections>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mJI-Bx-qYr">
+                    <rect key="frame" x="-2" y="339" width="54" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="选项" id="9iO-Xo-dVJ">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Rkw-p5-qWW" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="30" id="0Kf-gf-Pce"/>
+                <constraint firstItem="2jx-dB-4Lb" firstAttribute="top" secondItem="Rkw-p5-qWW" secondAttribute="bottom" id="0Ni-0k-rD1"/>
+                <constraint firstItem="2jx-dB-4Lb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="8VC-I7-olE"/>
+                <constraint firstItem="2jx-dB-4Lb" firstAttribute="height" secondItem="Rkw-p5-qWW" secondAttribute="height" id="Evs-kp-IsK"/>
+                <constraint firstItem="Rkw-p5-qWW" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="ISS-tC-hTs"/>
+                <constraint firstItem="Rkw-p5-qWW" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="SfW-GI-U0N"/>
+                <constraint firstAttribute="trailing" secondItem="Rkw-p5-qWW" secondAttribute="trailing" id="VDq-xj-g5M"/>
+                <constraint firstAttribute="trailing" secondItem="mJI-Bx-qYr" secondAttribute="trailing" id="hdH-aT-mtr"/>
+                <constraint firstItem="mJI-Bx-qYr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="o8T-9T-CTg"/>
+                <constraint firstAttribute="trailing" secondItem="2jx-dB-4Lb" secondAttribute="trailing" id="pKE-xC-XuI"/>
+                <constraint firstItem="mJI-Bx-qYr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="6" id="uf3-N7-yoP"/>
+                <constraint firstItem="mJI-Bx-qYr" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="yrw-6q-YnF"/>
+            </constraints>
+            <point key="canvasLocation" x="-966" y="274.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="display" catalog="system" width="19" height="15"/>
+        <image name="wrench.and.screwdriver.fill" catalog="system" width="19" height="18"/>
+    </resources>
+</document>

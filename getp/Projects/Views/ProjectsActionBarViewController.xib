@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ProjectsActionBarViewController" customModule="getp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zE3-Sc-RJj">
+                    <rect key="frame" x="12" y="8.5" width="26.5" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="3R8-Pw-XKT"/>
+                        <constraint firstAttribute="width" constant="26" id="ZfF-4H-l89"/>
+                    </constraints>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="pCg-5V-aNl">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RyI-Xx-us7">
+                    <rect key="frame" x="48" y="9" width="92" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="s92-87-knH"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Filter" drawsBackground="YES" id="yl6-jF-Ed1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RyI-Xx-us7" secondAttribute="trailing" constant="12" id="1HM-Ih-P3D"/>
+                <constraint firstItem="RyI-Xx-us7" firstAttribute="leading" secondItem="zE3-Sc-RJj" secondAttribute="trailing" constant="10" id="Ki5-Zc-Bho"/>
+                <constraint firstItem="zE3-Sc-RJj" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="WZH-il-X2f"/>
+                <constraint firstItem="zE3-Sc-RJj" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="eIu-UA-rSu"/>
+                <constraint firstItem="RyI-Xx-us7" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="xyu-zV-v0i"/>
+            </constraints>
+            <point key="canvasLocation" x="-374" y="118"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="14" height="13"/>
+    </resources>
+</document>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView id="Lgp-Co-Avs" customClass="ProjectCell" customModule="getp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tPh-Zu-h5q">
+                    <rect key="frame" x="10" y="8" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="gK3-zS-Iab"/>
+                        <constraint firstAttribute="width" constant="40" id="hcD-kj-sSD"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ZOg-zs-jRR"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-Qq-o8z">
+                    <rect key="frame" x="58" y="31" width="246" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="uzS-Nz-ud1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9bL-ec-SCF">
+                    <rect key="frame" x="58" y="14" width="246" height="11"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="c4q-QM-Au8">
+                        <font key="font" metaFont="system" size="9"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Edu-Qq-o8z" firstAttribute="top" secondItem="Lgp-Co-Avs" secondAttribute="top" constant="8" id="4TK-Na-yPs"/>
+                <constraint firstItem="Edu-Qq-o8z" firstAttribute="leading" secondItem="tPh-Zu-h5q" secondAttribute="trailing" constant="10" id="D1P-dC-LsQ"/>
+                <constraint firstAttribute="trailing" secondItem="9bL-ec-SCF" secondAttribute="trailing" constant="10" id="IYw-sV-LHf"/>
+                <constraint firstItem="tPh-Zu-h5q" firstAttribute="leading" secondItem="Lgp-Co-Avs" secondAttribute="leading" constant="10" id="Vkw-rA-ND7"/>
+                <constraint firstItem="tPh-Zu-h5q" firstAttribute="centerY" secondItem="Lgp-Co-Avs" secondAttribute="centerY" id="sB7-p6-Wwt"/>
+                <constraint firstItem="9bL-ec-SCF" firstAttribute="top" secondItem="Edu-Qq-o8z" secondAttribute="bottom" constant="6" id="tAn-9R-eCy"/>
+                <constraint firstItem="9bL-ec-SCF" firstAttribute="leading" secondItem="Edu-Qq-o8z" secondAttribute="leading" id="wGm-um-SXM"/>
+                <constraint firstAttribute="trailing" secondItem="Edu-Qq-o8z" secondAttribute="trailing" constant="10" id="zVk-Tj-EmH"/>
+            </constraints>
+            <point key="canvasLocation" x="77" y="129.5"/>
+        </tableCellView>
+    </objects>
+</document>
