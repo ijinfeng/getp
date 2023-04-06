@@ -80,6 +80,19 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JDZ-tu-a5F">
+                    <rect key="frame" x="5" y="106" width="86" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="RuD-lI-Jbj"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="复制路径" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Cy-5F-Jqq">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onClickCopyPath:" target="-2" id="Y19-Bz-pzF"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="KQY-hL-vYh" firstAttribute="width" secondItem="wR9-gc-ZJw" secondAttribute="width" id="57J-dS-uUC"/>
@@ -93,6 +106,8 @@
                 <constraint firstItem="PgY-F6-R3d" firstAttribute="leading" secondItem="wR9-gc-ZJw" secondAttribute="leading" id="LRr-cK-jZs"/>
                 <constraint firstItem="KQY-hL-vYh" firstAttribute="top" secondItem="PgY-F6-R3d" secondAttribute="bottom" constant="6" id="OlU-Hx-bZf"/>
                 <constraint firstAttribute="trailing" secondItem="chE-Y0-ZTg" secondAttribute="trailing" priority="750" constant="12" id="WG2-bp-iZh"/>
+                <constraint firstItem="JDZ-tu-a5F" firstAttribute="top" secondItem="KQY-hL-vYh" secondAttribute="bottom" constant="30" id="ZQQ-Yw-9mi"/>
+                <constraint firstItem="JDZ-tu-a5F" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="cZS-Dl-RGA"/>
                 <constraint firstItem="8wt-rf-Xr9" firstAttribute="centerY" secondItem="KQY-hL-vYh" secondAttribute="centerY" id="f5G-f9-jyX"/>
                 <constraint firstItem="chE-Y0-ZTg" firstAttribute="leading" secondItem="wR9-gc-ZJw" secondAttribute="trailing" id="gff-8N-bSv"/>
                 <constraint firstItem="pGv-TG-TbE" firstAttribute="centerY" secondItem="PgY-F6-R3d" secondAttribute="centerY" id="lCO-5G-n4n"/>

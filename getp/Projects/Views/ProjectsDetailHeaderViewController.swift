@@ -49,4 +49,7 @@ class ProjectsDetailHeaderViewController: NSViewController {
         // Do view setup here.
     }
     
+    @IBAction func onClickCopyPath(_ sender: NSButton) {
+        self.showTip(tip: "路径已复制")
+    }
 }

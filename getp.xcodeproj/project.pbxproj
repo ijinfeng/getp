@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3765513A29DF0C760071A9BC /* ToyBricksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765513829DF0C760071A9BC /* ToyBricksViewController.swift */; };
+		3765513B29DF0C760071A9BC /* ToyBricksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765513929DF0C760071A9BC /* ToyBricksViewController.xib */; };
+		3765513F29DF0CB20071A9BC /* ConvenienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765513D29DF0CB20071A9BC /* ConvenienceViewController.swift */; };
+		3765514029DF0CB20071A9BC /* ConvenienceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765513E29DF0CB20071A9BC /* ConvenienceViewController.xib */; };
+		3765514429DF11450071A9BC /* ToyBricksSidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765514229DF11450071A9BC /* ToyBricksSidebarViewController.swift */; };
+		3765514529DF11450071A9BC /* ToyBricksSidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765514329DF11450071A9BC /* ToyBricksSidebarViewController.xib */; };
+		3765514E29DF16680071A9BC /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765514C29DF16680071A9BC /* TipViewController.swift */; };
+		3765514F29DF16680071A9BC /* TipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765514D29DF16680071A9BC /* TipViewController.xib */; };
 		37E4D24F29DB1A1A0009925D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E4D24E29DB1A1A0009925D /* AppDelegate.swift */; };
 		37E4D25129DB1A1A0009925D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E4D25029DB1A1A0009925D /* MainViewController.swift */; };
 		37E4D25329DB1A1C0009925D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E4D25229DB1A1C0009925D /* Assets.xcassets */; };
@@ -57,6 +65,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3765513829DF0C760071A9BC /* ToyBricksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyBricksViewController.swift; sourceTree = "<group>"; };
+		3765513929DF0C760071A9BC /* ToyBricksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToyBricksViewController.xib; sourceTree = "<group>"; };
+		3765513D29DF0CB20071A9BC /* ConvenienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceViewController.swift; sourceTree = "<group>"; };
+		3765513E29DF0CB20071A9BC /* ConvenienceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConvenienceViewController.xib; sourceTree = "<group>"; };
+		3765514229DF11450071A9BC /* ToyBricksSidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyBricksSidebarViewController.swift; sourceTree = "<group>"; };
+		3765514329DF11450071A9BC /* ToyBricksSidebarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToyBricksSidebarViewController.xib; sourceTree = "<group>"; };
+		3765514C29DF16680071A9BC /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
+		3765514D29DF16680071A9BC /* TipViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipViewController.xib; sourceTree = "<group>"; };
 		37E4D24B29DB1A1A0009925D /* getp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E4D24E29DB1A1A0009925D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37E4D25029DB1A1A0009925D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +134,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3765513729DF0C500071A9BC /* ToyBricks */ = {
+			isa = PBXGroup;
+			children = (
+				3765513829DF0C760071A9BC /* ToyBricksViewController.swift */,
+				3765513929DF0C760071A9BC /* ToyBricksViewController.xib */,
+				3765514129DF111A0071A9BC /* Views */,
+			);
+			path = ToyBricks;
+			sourceTree = "<group>";
+		};
+		3765513C29DF0C8B0071A9BC /* Convenience */ = {
+			isa = PBXGroup;
+			children = (
+				3765513D29DF0CB20071A9BC /* ConvenienceViewController.swift */,
+				3765513E29DF0CB20071A9BC /* ConvenienceViewController.xib */,
+			);
+			path = Convenience;
+			sourceTree = "<group>";
+		};
+		3765514129DF111A0071A9BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3765514229DF11450071A9BC /* ToyBricksSidebarViewController.swift */,
+				3765514329DF11450071A9BC /* ToyBricksSidebarViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3765514629DF15FC0071A9BC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3765514B29DF165B0071A9BC /* Tip */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3765514B29DF165B0071A9BC /* Tip */ = {
+			isa = PBXGroup;
+			children = (
+				3765514C29DF16680071A9BC /* TipViewController.swift */,
+				3765514D29DF16680071A9BC /* TipViewController.xib */,
+			);
+			path = Tip;
+			sourceTree = "<group>";
+		};
 		37E4D24229DB1A1A0009925D = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +205,9 @@
 				37E4D24E29DB1A1A0009925D /* AppDelegate.swift */,
 				37E4D25029DB1A1A0009925D /* MainViewController.swift */,
 				9A8DDD2229DC07650010F845 /* GetpManager.swift */,
+				3765514629DF15FC0071A9BC /* Components */,
+				3765513C29DF0C8B0071A9BC /* Convenience */,
+				3765513729DF0C500071A9BC /* ToyBricks */,
 				9A8DDD0929DBF1140010F845 /* Helper */,
 				9A8DDCFF29DBD3860010F845 /* Projects */,
 				9A8DDCF729DBCA0D0010F845 /* ToolBar */,
@@ -334,14 +398,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3765514F29DF16680071A9BC /* TipViewController.xib in Resources */,
 				9A8DDD0329DBD3A70010F845 /* ProjectsListViewController.xib in Resources */,
+				3765514029DF0CB20071A9BC /* ConvenienceViewController.xib in Resources */,
 				9A8DDD2E29DC1C9C0010F845 /* ProjectDetailViewController.xib in Resources */,
 				9A8DDCFD29DBCA560010F845 /* ToolBarViewController.xib in Resources */,
+				3765513B29DF0C760071A9BC /* ToyBricksViewController.xib in Resources */,
 				9A8DDD2729DC18BC0010F845 /* ProjectsActionBarViewController.xib in Resources */,
 				9A8DDD1F29DBFA6D0010F845 /* ProjectsViewController.xib in Resources */,
 				9A411A8529DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.xib in Resources */,
 				37E4D25329DB1A1C0009925D /* Assets.xcassets in Resources */,
 				37E4D25629DB1A1C0009925D /* Main.storyboard in Resources */,
+				3765514529DF11450071A9BC /* ToyBricksSidebarViewController.xib in Resources */,
 				9A8DDD3729DC24FE0010F845 /* ProjectCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,13 +437,17 @@
 			files = (
 				9A8DDD3329DC234C0010F845 /* ProjectModel.swift in Sources */,
 				9A8DDD3129DC23390010F845 /* ProjectsHandler.swift in Sources */,
+				3765514E29DF16680071A9BC /* TipViewController.swift in Sources */,
 				9A411A7B29DE713D00CFDD7C /* PathExt.swift in Sources */,
+				3765513A29DF0C760071A9BC /* ToyBricksViewController.swift in Sources */,
+				3765514429DF11450071A9BC /* ToyBricksSidebarViewController.swift in Sources */,
 				9A8DDD0229DBD3A70010F845 /* ProjectsListViewController.swift in Sources */,
 				9A411A8429DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift in Sources */,
 				9A8DDD3529DC24E40010F845 /* ProjectCell.swift in Sources */,
 				9A8DDD2D29DC1C9C0010F845 /* ProjectDetailViewController.swift in Sources */,
 				9A411A7D29DE76F600CFDD7C /* ProjectsExt.swift in Sources */,
 				9A8DDD2A29DC1AF60010F845 /* LayoutExt.swift in Sources */,
+				3765513F29DF0CB20071A9BC /* ConvenienceViewController.swift in Sources */,
 				9A8DDCFC29DBCA560010F845 /* ToolBarViewController.swift in Sources */,
 				37E4D25129DB1A1A0009925D /* MainViewController.swift in Sources */,
 				9A8DDD0B29DBF1240010F845 /* ColorExt.swift in Sources */,

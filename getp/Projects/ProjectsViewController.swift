@@ -7,6 +7,7 @@
 
 import Cocoa
 
+/// 项目管理
 class ProjectsViewController: NSViewController {
     
     @IBOutlet weak var splitView: NSView!

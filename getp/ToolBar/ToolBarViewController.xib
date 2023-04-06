@@ -11,7 +11,6 @@
             <connections>
                 <outlet property="projectsButton" destination="Rkw-p5-qWW" id="9eW-XP-v3q"/>
                 <outlet property="textLabel" destination="mJI-Bx-qYr" id="ies-rZ-by5"/>
-                <outlet property="toolButton" destination="2jx-dB-4Lb" id="cHa-Mc-LhY"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -54,16 +53,46 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="o0Y-P4-JD0" userLabel="toy bricks" customClass="ToolBarButton" customModule="getp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="181" width="50" height="50"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="briefcase" catalog="system"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="tip" value="积木"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onClickToyBricks:" target="-2" id="LcW-2T-UIe"/>
+                    </connections>
+                </customView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cOn-Nf-NaM">
+                    <rect key="frame" x="11" y="15" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="RnY-Jr-jl7"/>
+                        <constraint firstAttribute="width" constant="28" id="SiN-FO-kt9"/>
+                    </constraints>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAdvanced" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="OvD-fL-Me1">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onClickSetting:" target="-2" id="AUg-wz-C3l"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="Rkw-p5-qWW" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="30" id="0Kf-gf-Pce"/>
                 <constraint firstItem="2jx-dB-4Lb" firstAttribute="top" secondItem="Rkw-p5-qWW" secondAttribute="bottom" id="0Ni-0k-rD1"/>
+                <constraint firstAttribute="trailing" secondItem="o0Y-P4-JD0" secondAttribute="trailing" id="3OS-pF-R9n"/>
+                <constraint firstItem="o0Y-P4-JD0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="45Z-E1-vZq"/>
                 <constraint firstItem="2jx-dB-4Lb" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="8VC-I7-olE"/>
                 <constraint firstItem="2jx-dB-4Lb" firstAttribute="height" secondItem="Rkw-p5-qWW" secondAttribute="height" id="Evs-kp-IsK"/>
                 <constraint firstItem="Rkw-p5-qWW" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="ISS-tC-hTs"/>
                 <constraint firstItem="Rkw-p5-qWW" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="SfW-GI-U0N"/>
                 <constraint firstAttribute="trailing" secondItem="Rkw-p5-qWW" secondAttribute="trailing" id="VDq-xj-g5M"/>
+                <constraint firstItem="cOn-Nf-NaM" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="aOD-k2-3EK"/>
+                <constraint firstItem="o0Y-P4-JD0" firstAttribute="height" secondItem="2jx-dB-4Lb" secondAttribute="height" id="cAR-YQ-AVh"/>
+                <constraint firstItem="o0Y-P4-JD0" firstAttribute="top" secondItem="2jx-dB-4Lb" secondAttribute="bottom" id="dWJ-YN-qFi"/>
                 <constraint firstAttribute="trailing" secondItem="mJI-Bx-qYr" secondAttribute="trailing" id="hdH-aT-mtr"/>
+                <constraint firstAttribute="bottom" secondItem="cOn-Nf-NaM" secondAttribute="bottom" constant="15" id="mQU-mx-tg6"/>
                 <constraint firstItem="mJI-Bx-qYr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="o8T-9T-CTg"/>
                 <constraint firstAttribute="trailing" secondItem="2jx-dB-4Lb" secondAttribute="trailing" id="pKE-xC-XuI"/>
                 <constraint firstItem="mJI-Bx-qYr" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="6" id="uf3-N7-yoP"/>
@@ -73,6 +102,8 @@
         </customView>
     </objects>
     <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="briefcase" catalog="system" width="18" height="15"/>
         <image name="display" catalog="system" width="19" height="15"/>
         <image name="wrench.and.screwdriver.fill" catalog="system" width="19" height="18"/>
     </resources>

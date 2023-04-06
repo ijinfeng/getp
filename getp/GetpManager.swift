@@ -11,6 +11,7 @@ import Foundation
 enum GetpCase: Int {
 case project = 1
 case tool
+case bricks
 }
 
 
