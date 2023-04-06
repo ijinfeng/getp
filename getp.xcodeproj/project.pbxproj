@@ -16,6 +16,8 @@
 		37E4D26D29DB1A1D0009925D /* getpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E4D26C29DB1A1D0009925D /* getpUITestsLaunchTests.swift */; };
 		9A411A7B29DE713D00CFDD7C /* PathExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A411A7A29DE713D00CFDD7C /* PathExt.swift */; };
 		9A411A7D29DE76F600CFDD7C /* ProjectsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A411A7C29DE76F600CFDD7C /* ProjectsExt.swift */; };
+		9A411A8429DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A411A8229DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift */; };
+		9A411A8529DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A411A8329DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.xib */; };
 		9A8DDCFC29DBCA560010F845 /* ToolBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DDCFA29DBCA560010F845 /* ToolBarViewController.swift */; };
 		9A8DDCFD29DBCA560010F845 /* ToolBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8DDCFB29DBCA560010F845 /* ToolBarViewController.xib */; };
 		9A8DDD0229DBD3A70010F845 /* ProjectsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DDD0029DBD3A70010F845 /* ProjectsListViewController.swift */; };
@@ -68,6 +70,8 @@
 		37E4D26C29DB1A1D0009925D /* getpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getpUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A411A7A29DE713D00CFDD7C /* PathExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExt.swift; sourceTree = "<group>"; };
 		9A411A7C29DE76F600CFDD7C /* ProjectsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsExt.swift; sourceTree = "<group>"; };
+		9A411A8229DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsDetailHeaderViewController.swift; sourceTree = "<group>"; };
+		9A411A8329DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectsDetailHeaderViewController.xib; sourceTree = "<group>"; };
 		9A8DDCFA29DBCA560010F845 /* ToolBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarViewController.swift; sourceTree = "<group>"; };
 		9A8DDCFB29DBCA560010F845 /* ToolBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolBarViewController.xib; sourceTree = "<group>"; };
 		9A8DDD0029DBD3A70010F845 /* ProjectsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				9A8DDD3629DC24FE0010F845 /* ProjectCell.xib */,
 				9A8DDD2B29DC1C9C0010F845 /* ProjectDetailViewController.swift */,
 				9A8DDD2C29DC1C9C0010F845 /* ProjectDetailViewController.xib */,
+				9A411A8229DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift */,
+				9A411A8329DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 				9A8DDCFD29DBCA560010F845 /* ToolBarViewController.xib in Resources */,
 				9A8DDD2729DC18BC0010F845 /* ProjectsActionBarViewController.xib in Resources */,
 				9A8DDD1F29DBFA6D0010F845 /* ProjectsViewController.xib in Resources */,
+				9A411A8529DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.xib in Resources */,
 				37E4D25329DB1A1C0009925D /* Assets.xcassets in Resources */,
 				37E4D25629DB1A1C0009925D /* Main.storyboard in Resources */,
 				9A8DDD3729DC24FE0010F845 /* ProjectCell.xib in Resources */,
@@ -364,6 +371,7 @@
 				9A8DDD3129DC23390010F845 /* ProjectsHandler.swift in Sources */,
 				9A411A7B29DE713D00CFDD7C /* PathExt.swift in Sources */,
 				9A8DDD0229DBD3A70010F845 /* ProjectsListViewController.swift in Sources */,
+				9A411A8429DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift in Sources */,
 				9A8DDD3529DC24E40010F845 /* ProjectCell.swift in Sources */,
 				9A8DDD2D29DC1C9C0010F845 /* ProjectDetailViewController.swift in Sources */,
 				9A411A7D29DE76F600CFDD7C /* ProjectsExt.swift in Sources */,

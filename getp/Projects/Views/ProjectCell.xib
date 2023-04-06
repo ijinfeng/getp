@@ -21,9 +21,9 @@
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="placeholdertext.fill" catalog="system" id="ZOg-zs-jRR"/>
                 </imageView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-Qq-o8z">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-Qq-o8z">
                     <rect key="frame" x="58" y="50" width="246" height="16"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="项目名字" id="uzS-Nz-ud1">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" title="项目名字" id="uzS-Nz-ud1">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -37,9 +37,9 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UqB-bk-UvT">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="UqB-bk-UvT">
                     <rect key="frame" x="8" y="8" width="25" height="13"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="路径" id="vAW-nV-pBJ">
+                    <textFieldCell key="cell" lineBreakMode="truncatingHead" title="路径" id="vAW-nV-pBJ">
                         <font key="font" metaFont="system" size="10"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -47,6 +47,7 @@
                 </textField>
             </subviews>
             <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UqB-bk-UvT" secondAttribute="trailing" constant="10" id="C5c-BL-gTZ"/>
                 <constraint firstItem="Edu-Qq-o8z" firstAttribute="leading" secondItem="tPh-Zu-h5q" secondAttribute="trailing" constant="10" id="D1P-dC-LsQ"/>
                 <constraint firstAttribute="trailing" secondItem="9bL-ec-SCF" secondAttribute="trailing" constant="10" id="IYw-sV-LHf"/>
                 <constraint firstItem="UqB-bk-UvT" firstAttribute="leading" secondItem="tPh-Zu-h5q" secondAttribute="leading" id="Oof-cr-Ued"/>

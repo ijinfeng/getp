@@ -19,10 +19,10 @@
             <rect key="frame" x="0.0" y="0.0" width="268" height="458"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <box borderType="bezel" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="xl0-dX-FSx">
+                <box borderType="none" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="xl0-dX-FSx">
                     <rect key="frame" x="-3" y="-4" width="274" height="40"/>
                     <view key="contentView" id="V97-P5-EVQ">
-                        <rect key="frame" x="3" y="3" width="268" height="34"/>
+                        <rect key="frame" x="0.0" y="0.0" width="274" height="40"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <constraints>
@@ -78,7 +78,7 @@
                 <constraint firstItem="jIh-Fd-jFf" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="qyq-Gs-bUZ"/>
                 <constraint firstAttribute="bottom" secondItem="xl0-dX-FSx" secondAttribute="bottom" id="rRq-QX-Y6m"/>
             </constraints>
-            <point key="canvasLocation" x="-238" y="8"/>
+            <point key="canvasLocation" x="-383" y="15"/>
         </customView>
     </objects>
 </document>

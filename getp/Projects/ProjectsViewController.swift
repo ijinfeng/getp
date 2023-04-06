@@ -26,25 +26,23 @@ class ProjectsViewController: NSViewController {
  
     func setupUI() {
         splitViewController.splitView.dividerStyle = .thin
+        splitViewController.splitView.isVertical = true
         addChild(splitViewController)
         splitView.addSubview(splitViewController.view)
         splitViewController.view.setEdgeConstraints(equal: splitView)
         
         // left split view
         let leftViewController = ProjectsListViewController(nibName: "ProjectsListViewController", bundle: nil)
-        listViewController = leftViewController
         let leftView = leftViewController.view
-        leftView.translatesAutoresizingMaskIntoConstraints = false
-        leftView.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
-        leftView.widthAnchor.constraint(greaterThanOrEqualToConstant: 120).isActive = true
         let left = NSSplitViewItem(viewController: leftViewController)
+        left.minimumThickness = 120
+        left.maximumThickness = 300
         splitViewController.addSplitViewItem(left)
         
         // right split view
         let rightViewController = ProjectDetailViewController(nibName: "ProjectDetailViewController", bundle: nil)
         detailViewController = rightViewController
         let rightView = rightViewController.view
-        rightView.setEdgeConstraints(equal: splitViewController.view)
         let right = NSSplitViewItem(viewController: rightViewController)
         splitViewController.addSplitViewItem(right)
     }

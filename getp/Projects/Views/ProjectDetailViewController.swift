@@ -11,36 +11,21 @@ class ProjectDetailViewController: NSViewController {
 
     @IBOutlet weak var coverView: NSView!
     
-    @IBOutlet weak var nameLabel: NSTextField!
     
-    @IBOutlet weak var remarkLabel: NSTextField!
+    @IBOutlet weak var headerView: NSView!
     
-    @IBOutlet weak var pathLabel: NSTextField!
+    private let headerViewController = ProjectsDetailHeaderViewController(nibName: "ProjectsDetailHeaderViewController", bundle: nil)
     
-    @IBOutlet weak var ptypeLabel: NSTextField!
     
     public var model: ProjectModel? {
         didSet {
             if let model = model {
-                nameLabel.stringValue = model.name
-                remarkLabel.stringValue = model.remark ?? ""
-                pathLabel.stringValue = model.path
-                if model.ptype == .apple {
-                    ptypeLabel.stringValue = "apple"
-                } else if model.ptype == .flutter {
-                    ptypeLabel.stringValue = "flutter"
-                } else {
-                    if model.ftype == .directory {
-                        ptypeLabel.stringValue = "目录"
-                    } else if model.ftype == .file {
-                        ptypeLabel.stringValue = "文件"
-                    } else {
-                        ptypeLabel.stringValue = "未知"
-                    }
-                }
+                headerViewController.model = model
                 coverView.isHidden = true
+                headerView.isHidden = false
             } else {
                 coverView.isHidden = false
+                headerView.isHidden = true
             }
         }
     }
@@ -48,6 +33,9 @@ class ProjectDetailViewController: NSViewController {
     override func awakeFromNib() {
         coverView.wantsLayer = true
         coverView.layer?.backgroundColor = NSColor.background.cgColor
+        addChild(headerViewController)
+        headerView.addSubview(headerViewController.view)
+        headerViewController.view.setEdgeConstraints(equal: headerView)
     }
     
     override func viewDidLoad() {
