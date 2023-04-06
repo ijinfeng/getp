@@ -38,6 +38,7 @@ class MainViewController: NSViewController {
     
     func setProjectsCase() {
         let projectsViewController = ProjectsViewController(nibName: "ProjectsViewController", bundle: nil)
+        addChild(projectsViewController)
         contentBox.contentView = projectsViewController.view
         projectsViewController.view.setEdgeConstraints(equal: contentBox)
     }

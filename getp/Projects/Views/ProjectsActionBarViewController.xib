@@ -27,6 +27,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="onClickAddProject:" target="-2" id="brA-h2-bwM"/>
+                    </connections>
                 </button>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RyI-Xx-us7">
                     <rect key="frame" x="48" y="9" width="92" height="28"/>

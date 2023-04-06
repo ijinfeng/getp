@@ -8,9 +8,6 @@
 import Foundation
 import AppKit
 
-/// 主题色
-let kThemeColor: NSColor = NSColor.hexColor(hex: 0xE5E6EA)
-
 extension NSColor {
     
     /// 十六进制颜色
@@ -45,7 +42,7 @@ extension NSColor {
     
     /// 中度灰色
     class var middleGray: NSColor {
-        return hexColor(hex: 0xF5F5F5)
+        return hexColor(hex: 0xE5E6EA)
     }
     
     class var text3: NSColor {

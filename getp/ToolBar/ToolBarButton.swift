@@ -27,7 +27,7 @@ import Cocoa
     var selected: Bool = false {
         didSet {
             if selected {
-                layer?.backgroundColor = kThemeColor.cgColor
+                layer?.backgroundColor = NSColor.middleGray.cgColor
             } else {
                 layer?.backgroundColor = NSColor.background.cgColor
             }
@@ -54,7 +54,7 @@ import Cocoa
         if selected {
             return
         }
-        layer?.backgroundColor = kThemeColor.withAlphaComponent(0.8).cgColor
+        layer?.backgroundColor = NSColor.middleGray.withAlphaComponent(0.8).cgColor
     }
     
     override func mouseExited(with event: NSEvent) {

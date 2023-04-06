@@ -10,45 +10,65 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <tableCellView id="Lgp-Co-Avs" customClass="ProjectCell" customModule="getp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="312" height="55"/>
+            <rect key="frame" x="0.0" y="0.0" width="312" height="74"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tPh-Zu-h5q">
-                    <rect key="frame" x="10" y="8" width="40" height="40"/>
+                    <rect key="frame" x="10" y="23.5" width="40.5" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="gK3-zS-Iab"/>
                         <constraint firstAttribute="width" constant="40" id="hcD-kj-sSD"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ZOg-zs-jRR"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="placeholdertext.fill" catalog="system" id="ZOg-zs-jRR"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-Qq-o8z">
-                    <rect key="frame" x="58" y="31" width="246" height="16"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="uzS-Nz-ud1">
+                    <rect key="frame" x="58" y="50" width="246" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="项目名字" id="uzS-Nz-ud1">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9bL-ec-SCF">
-                    <rect key="frame" x="58" y="14" width="246" height="11"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="c4q-QM-Au8">
-                        <font key="font" metaFont="system" size="9"/>
+                    <rect key="frame" x="58" y="33" width="246" height="11"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" editable="YES" placeholderString="点击输入备注" id="c4q-QM-Au8">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UqB-bk-UvT">
+                    <rect key="frame" x="8" y="8" width="25" height="13"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="路径" id="vAW-nV-pBJ">
+                        <font key="font" metaFont="system" size="10"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="Edu-Qq-o8z" firstAttribute="top" secondItem="Lgp-Co-Avs" secondAttribute="top" constant="8" id="4TK-Na-yPs"/>
                 <constraint firstItem="Edu-Qq-o8z" firstAttribute="leading" secondItem="tPh-Zu-h5q" secondAttribute="trailing" constant="10" id="D1P-dC-LsQ"/>
                 <constraint firstAttribute="trailing" secondItem="9bL-ec-SCF" secondAttribute="trailing" constant="10" id="IYw-sV-LHf"/>
+                <constraint firstItem="UqB-bk-UvT" firstAttribute="leading" secondItem="tPh-Zu-h5q" secondAttribute="leading" id="Oof-cr-Ued"/>
+                <constraint firstItem="Edu-Qq-o8z" firstAttribute="top" secondItem="tPh-Zu-h5q" secondAttribute="top" id="UAQ-UX-Rjk"/>
                 <constraint firstItem="tPh-Zu-h5q" firstAttribute="leading" secondItem="Lgp-Co-Avs" secondAttribute="leading" constant="10" id="Vkw-rA-ND7"/>
-                <constraint firstItem="tPh-Zu-h5q" firstAttribute="centerY" secondItem="Lgp-Co-Avs" secondAttribute="centerY" id="sB7-p6-Wwt"/>
+                <constraint firstAttribute="bottom" secondItem="UqB-bk-UvT" secondAttribute="bottom" constant="8" id="b8i-Q9-Kwe"/>
+                <constraint firstItem="tPh-Zu-h5q" firstAttribute="top" secondItem="Lgp-Co-Avs" secondAttribute="top" constant="8" id="feO-PE-Ran"/>
+                <constraint firstItem="UqB-bk-UvT" firstAttribute="top" secondItem="tPh-Zu-h5q" secondAttribute="bottom" constant="5" id="t4M-Xu-wd1"/>
                 <constraint firstItem="9bL-ec-SCF" firstAttribute="top" secondItem="Edu-Qq-o8z" secondAttribute="bottom" constant="6" id="tAn-9R-eCy"/>
                 <constraint firstItem="9bL-ec-SCF" firstAttribute="leading" secondItem="Edu-Qq-o8z" secondAttribute="leading" id="wGm-um-SXM"/>
                 <constraint firstAttribute="trailing" secondItem="Edu-Qq-o8z" secondAttribute="trailing" constant="10" id="zVk-Tj-EmH"/>
             </constraints>
-            <point key="canvasLocation" x="77" y="129.5"/>
+            <connections>
+                <outlet property="iconImageView" destination="tPh-Zu-h5q" id="HmN-lL-6ql"/>
+                <outlet property="nameLabel" destination="Edu-Qq-o8z" id="AeB-Do-mGj"/>
+                <outlet property="pathLabel" destination="UqB-bk-UvT" id="Hti-h4-QFt"/>
+                <outlet property="remarkLabel" destination="9bL-ec-SCF" id="JhP-wq-Wbe"/>
+            </connections>
+            <point key="canvasLocation" x="-249" y="126"/>
         </tableCellView>
     </objects>
+    <resources>
+        <image name="placeholdertext.fill" catalog="system" width="9" height="14"/>
+    </resources>
 </document>

@@ -17,12 +17,23 @@ class ProjectsListViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         setupUI()
+        listenViewDragging()
     }
     
+    func listenViewDragging() {
+        if let dragableView = view as? ProjectsListView {
+            dragableView.dragSuccessCallback = { [weak self] paths in
+                self?.tableView.reloadData()
+            }
+        }
+    }
 
     func setupUI() {
         // 设置action bar
         let actionBarViewController = ProjectsActionBarViewController(nibName: "ProjectsActionBarViewController", bundle: nil)
+        actionBarViewController.dragSuccessCallback = { [weak self] _ in
+            self?.tableView.reloadData()
+        }
         let actionBarView = actionBarViewController.view
         addChild(actionBarViewController)
         actionBar.contentView = actionBarView
@@ -31,6 +42,8 @@ class ProjectsListViewController: NSViewController {
         // 设置tableView
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.usesAutomaticRowHeights = true
+        tableView.allowsTypeSelect = true
         tableView.register(NSNib(nibNamed: "ProjectCell", bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier(rawValue: "cell"))
         
         let cellMenu = NSMenu(title: "菜单")
@@ -47,21 +60,22 @@ class ProjectsListViewController: NSViewController {
 
 extension ProjectsListViewController: NSTableViewDelegate, NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 14
+        return GetpManager.shared.projectHanlder.projectsCount
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "cell"), owner: nil)
+        if let projectCell = cell as? ProjectCell {
+            projectCell.model = GetpManager.shared.projectHanlder.project(at: row)
+        }
         return cell
     }
     
-    func tableView(_ tableView: NSTableView, didClick tableColumn: NSTableColumn) {
-        let row = tableView.selectedRow
-        print("row: \(row)")
-    }
-    
-    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 60
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if let tableView = notification.object as? NSTableView {
+            // 选中项: -1表示未选中
+            findProjectsViewController()?.detailViewController.model = GetpManager.shared.projectHanlder.project(at: tableView.selectedRow)
+        }
     }
 }
 
