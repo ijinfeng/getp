@@ -45,6 +45,15 @@
 		9A8DDD3529DC24E40010F845 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DDD3429DC24E40010F845 /* ProjectCell.swift */; };
 		9A8DDD3729DC24FE0010F845 /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8DDD3629DC24FE0010F845 /* ProjectCell.xib */; };
 		9A8DDD3929DC2A9C0010F845 /* ProjectsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DDD3829DC2A9C0010F845 /* ProjectsListView.swift */; };
+		9A93503B29DFB51600FAA151 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93503929DFB51600FAA151 /* TestViewController.swift */; };
+		9A93503C29DFB51600FAA151 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A93503A29DFB51600FAA151 /* TestViewController.xib */; };
+		9A93504129DFE97700FAA151 /* SupportedApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93504029DFE97700FAA151 /* SupportedApps.swift */; };
+		9A93504329DFEA7300FAA151 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93504229DFEA7300FAA151 /* App.swift */; };
+		9A93504729DFF10800FAA151 /* Terminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93504529DFF10800FAA151 /* Terminal.swift */; };
+		9A93504829DFF10800FAA151 /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93504629DFF10800FAA151 /* Finder.swift */; };
+		9A93504B29DFF33200FAA151 /* ScriptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93504A29DFF33200FAA151 /* ScriptManager.swift */; };
+		9A93504D29DFF38000FAA151 /* ScriptFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93504C29DFF38000FAA151 /* ScriptFactory.swift */; };
+		9A93505129DFF66900FAA151 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A93505029DFF66900FAA151 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +116,15 @@
 		9A8DDD3429DC24E40010F845 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		9A8DDD3629DC24FE0010F845 /* ProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectCell.xib; sourceTree = "<group>"; };
 		9A8DDD3829DC2A9C0010F845 /* ProjectsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListView.swift; sourceTree = "<group>"; };
+		9A93503929DFB51600FAA151 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9A93503A29DFB51600FAA151 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		9A93504029DFE97700FAA151 /* SupportedApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedApps.swift; sourceTree = "<group>"; };
+		9A93504229DFEA7300FAA151 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		9A93504529DFF10800FAA151 /* Terminal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terminal.swift; sourceTree = "<group>"; };
+		9A93504629DFF10800FAA151 /* Finder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finder.swift; sourceTree = "<group>"; };
+		9A93504A29DFF33200FAA151 /* ScriptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptManager.swift; sourceTree = "<group>"; };
+		9A93504C29DFF38000FAA151 /* ScriptFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptFactory.swift; sourceTree = "<group>"; };
+		9A93505029DFF66900FAA151 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +183,7 @@
 		3765514629DF15FC0071A9BC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9A93504E29DFF65400FAA151 /* Core */,
 				3765514B29DF165B0071A9BC /* Tip */,
 			);
 			path = Components;
@@ -205,6 +224,7 @@
 				37E4D24E29DB1A1A0009925D /* AppDelegate.swift */,
 				37E4D25029DB1A1A0009925D /* MainViewController.swift */,
 				9A8DDD2229DC07650010F845 /* GetpManager.swift */,
+				9A93503829DFB50700FAA151 /* Test */,
 				3765514629DF15FC0071A9BC /* Components */,
 				3765513C29DF0C8B0071A9BC /* Convenience */,
 				3765513729DF0C500071A9BC /* ToyBricks */,
@@ -292,6 +312,61 @@
 				9A8DDD3229DC234C0010F845 /* ProjectModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9A93503829DFB50700FAA151 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				9A93503929DFB51600FAA151 /* TestViewController.swift */,
+				9A93503A29DFB51600FAA151 /* TestViewController.xib */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		9A93503D29DFBB5600FAA151 /* ApplicationCore */ = {
+			isa = PBXGroup;
+			children = (
+				9A93504029DFE97700FAA151 /* SupportedApps.swift */,
+				9A93504229DFEA7300FAA151 /* App.swift */,
+			);
+			path = ApplicationCore;
+			sourceTree = "<group>";
+		};
+		9A93504429DFF10800FAA151 /* ScriptingBridge */ = {
+			isa = PBXGroup;
+			children = (
+				9A93504529DFF10800FAA151 /* Terminal.swift */,
+				9A93504629DFF10800FAA151 /* Finder.swift */,
+			);
+			path = ScriptingBridge;
+			sourceTree = "<group>";
+		};
+		9A93504929DFF17800FAA151 /* Script */ = {
+			isa = PBXGroup;
+			children = (
+				9A93504429DFF10800FAA151 /* ScriptingBridge */,
+				9A93504A29DFF33200FAA151 /* ScriptManager.swift */,
+				9A93504C29DFF38000FAA151 /* ScriptFactory.swift */,
+			);
+			path = Script;
+			sourceTree = "<group>";
+		};
+		9A93504E29DFF65400FAA151 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9A93504F29DFF65C00FAA151 /* Error */,
+				9A93504929DFF17800FAA151 /* Script */,
+				9A93503D29DFBB5600FAA151 /* ApplicationCore */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9A93504F29DFF65C00FAA151 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				9A93505029DFF66900FAA151 /* Error.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +457,7 @@
 				Base,
 			);
 			mainGroup = 37E4D24229DB1A1A0009925D;
-			productRefGroup = 37E4D24C29DB1A1A0009925D /* Products */;
+			productRefGroup = 37E4D24229DB1A1A0009925D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -410,6 +485,7 @@
 				37E4D25329DB1A1C0009925D /* Assets.xcassets in Resources */,
 				37E4D25629DB1A1C0009925D /* Main.storyboard in Resources */,
 				3765514529DF11450071A9BC /* ToyBricksSidebarViewController.xib in Resources */,
+				9A93503C29DFB51600FAA151 /* TestViewController.xib in Resources */,
 				9A8DDD3729DC24FE0010F845 /* ProjectCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,26 +512,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8DDD3329DC234C0010F845 /* ProjectModel.swift in Sources */,
+				9A93504D29DFF38000FAA151 /* ScriptFactory.swift in Sources */,
+				9A93504729DFF10800FAA151 /* Terminal.swift in Sources */,
 				9A8DDD3129DC23390010F845 /* ProjectsHandler.swift in Sources */,
+				9A93503B29DFB51600FAA151 /* TestViewController.swift in Sources */,
 				3765514E29DF16680071A9BC /* TipViewController.swift in Sources */,
 				9A411A7B29DE713D00CFDD7C /* PathExt.swift in Sources */,
 				3765513A29DF0C760071A9BC /* ToyBricksViewController.swift in Sources */,
+				9A93504829DFF10800FAA151 /* Finder.swift in Sources */,
 				3765514429DF11450071A9BC /* ToyBricksSidebarViewController.swift in Sources */,
+				9A93504129DFE97700FAA151 /* SupportedApps.swift in Sources */,
 				9A8DDD0229DBD3A70010F845 /* ProjectsListViewController.swift in Sources */,
 				9A411A8429DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift in Sources */,
 				9A8DDD3529DC24E40010F845 /* ProjectCell.swift in Sources */,
 				9A8DDD2D29DC1C9C0010F845 /* ProjectDetailViewController.swift in Sources */,
 				9A411A7D29DE76F600CFDD7C /* ProjectsExt.swift in Sources */,
+				9A93504329DFEA7300FAA151 /* App.swift in Sources */,
 				9A8DDD2A29DC1AF60010F845 /* LayoutExt.swift in Sources */,
 				3765513F29DF0CB20071A9BC /* ConvenienceViewController.swift in Sources */,
 				9A8DDCFC29DBCA560010F845 /* ToolBarViewController.swift in Sources */,
 				37E4D25129DB1A1A0009925D /* MainViewController.swift in Sources */,
 				9A8DDD0B29DBF1240010F845 /* ColorExt.swift in Sources */,
 				9A8DDD2629DC18BC0010F845 /* ProjectsActionBarViewController.swift in Sources */,
+				9A93504B29DFF33200FAA151 /* ScriptManager.swift in Sources */,
 				9A8DDD3929DC2A9C0010F845 /* ProjectsListView.swift in Sources */,
 				37E4D24F29DB1A1A0009925D /* AppDelegate.swift in Sources */,
 				9A8DDD0529DBD4DF0010F845 /* ToolBarButton.swift in Sources */,
 				9A8DDD1E29DBFA6D0010F845 /* ProjectsViewController.swift in Sources */,
+				9A93505129DFF66900FAA151 /* Error.swift in Sources */,
 				9A8DDD2329DC07650010F845 /* GetpManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +713,7 @@
 				DEVELOPMENT_TEAM = NK9M2883N3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Please give permissions to access your Finder & Terminal";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -657,6 +742,7 @@
 				DEVELOPMENT_TEAM = NK9M2883N3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Please give permissions to access your Finder & Terminal";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
