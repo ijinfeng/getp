@@ -13,7 +13,7 @@ class ProjectsDetailHeaderViewController: NSViewController {
     
     @IBOutlet weak var remarkLabel: NSTextField!
     
-    @IBOutlet weak var pathLabel: NSTextField!
+    @IBOutlet weak var pathLabelButton: NSButton!
     
     @IBOutlet weak var ptypeLabel: NSTextField!
     
@@ -25,7 +25,7 @@ class ProjectsDetailHeaderViewController: NSViewController {
             if let model = model {
                 nameLabel.stringValue = model.name
                 remarkLabel.stringValue = model.remark ?? ""
-                pathLabel.stringValue = model.path
+                pathLabelButton.title = model.path
                 
                 var items = ["终端", "VSCode"]
                 if model.ptype == .apple {
@@ -65,7 +65,12 @@ class ProjectsDetailHeaderViewController: NSViewController {
     }
     
     @IBAction func onClickCopyPath(_ sender: NSButton) {
-        self.showTip(tip: "路径已复制")
+        if let path = model?.path {
+            self.showTip(tip: "路径已拷贝")
+            let pasteboard = NSPasteboard.general;
+            pasteboard.clearContents()
+            pasteboard.setString(path, forType: .string)
+        }
     }
     
     

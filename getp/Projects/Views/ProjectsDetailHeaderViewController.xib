@@ -9,7 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="ProjectsDetailHeaderViewController" customModule="getp" customModuleProvider="target">
             <connections>
                 <outlet property="nameLabel" destination="tWG-Cp-mCy" id="L5e-w5-9hb"/>
-                <outlet property="pathLabel" destination="8wt-rf-Xr9" id="4qz-la-DZq"/>
+                <outlet property="pathLabelButton" destination="w0R-lb-l7Q" id="J5M-4X-qnc"/>
                 <outlet property="popupButton" destination="xgP-0S-ieR" id="h0F-Wy-Dkp"/>
                 <outlet property="ptypeLabel" destination="pGv-TG-TbE" id="fSY-Zh-CaU"/>
                 <outlet property="remarkLabel" destination="chE-Y0-ZTg" id="gCk-DL-svm"/>
@@ -19,7 +19,7 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="368" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="353" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wR9-gc-ZJw">
@@ -42,7 +42,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="chE-Y0-ZTg">
-                    <rect key="frame" x="70" y="207" width="288" height="16"/>
+                    <rect key="frame" x="70" y="207" width="273" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" editable="YES" placeholderString="点击输入备注" id="8Df-vn-udy">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -73,42 +73,21 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="8wt-rf-Xr9">
-                    <rect key="frame" x="70" y="163" width="300" height="16"/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" title="我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径" id="7jc-e4-qll">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JDZ-tu-a5F">
-                    <rect key="frame" x="5" y="106" width="86" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="72" id="RuD-lI-Jbj"/>
-                    </constraints>
-                    <buttonCell key="cell" type="push" title="复制路径" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Cy-5F-Jqq">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="onClickCopyPath:" target="-2" id="Y19-Bz-pzF"/>
-                    </connections>
-                </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-sN-bEO">
-                    <rect key="frame" x="97" y="106" width="114" height="32"/>
-                    <buttonCell key="cell" type="push" title="打开工程目录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kHn-Q6-NFa">
+                    <rect key="frame" x="5" y="106" width="129" height="32"/>
+                    <buttonCell key="cell" type="push" title="在Finder中打开" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kHn-Q6-NFa">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="onClickFinder:" target="-2" id="Hae-hW-S5G"/>
                     </connections>
                 </button>
                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-0S-ieR">
-                    <rect key="frame" x="221" y="109" width="78" height="25"/>
+                    <rect key="frame" x="144" y="109" width="78" height="25"/>
                     <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" selectedItem="hRN-4V-Bth" id="VEZ-mf-saj">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" id="FHy-7G-Xpb">
                             <items>
                                 <menuItem title="Item 1" state="on" id="hRN-4V-Bth"/>
@@ -119,7 +98,7 @@
                     </popUpButtonCell>
                 </popUpButton>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="naI-ec-dgQ">
-                    <rect key="frame" x="293" y="106" width="61" height="32"/>
+                    <rect key="frame" x="216" y="106" width="61" height="32"/>
                     <buttonCell key="cell" type="push" title="打开" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rqt-ck-2dJ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -128,37 +107,48 @@
                         <action selector="onClickProject:" target="-2" id="6ur-aL-qJG"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="w0R-lb-l7Q" customClass="LinkButton" customModule="getp" customModuleProvider="target">
+                    <rect key="frame" x="72" y="163" width="271" height="16"/>
+                    <buttonCell key="cell" type="bevel" title="我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径我是一条路径" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="sEr-5C-x4P">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="tip" value="拷贝路径"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onClickCopyPath:" target="-2" id="9Io-1c-7Oi"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
-                <constraint firstItem="xgP-0S-ieR" firstAttribute="centerY" secondItem="JDZ-tu-a5F" secondAttribute="centerY" id="2oQ-Rc-TLA"/>
+                <constraint firstItem="xgP-0S-ieR" firstAttribute="centerY" secondItem="Ts0-sN-bEO" secondAttribute="centerY" id="3ew-uZ-xA9"/>
                 <constraint firstItem="KQY-hL-vYh" firstAttribute="width" secondItem="wR9-gc-ZJw" secondAttribute="width" id="57J-dS-uUC"/>
                 <constraint firstItem="wR9-gc-ZJw" firstAttribute="leading" secondItem="tWG-Cp-mCy" secondAttribute="leading" id="62o-kQ-zp6"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8wt-rf-Xr9" secondAttribute="trailing" id="7jB-bc-wDs"/>
+                <constraint firstItem="naI-ec-dgQ" firstAttribute="centerY" secondItem="xgP-0S-ieR" secondAttribute="centerY" id="7m1-3c-H2W"/>
                 <constraint firstItem="tWG-Cp-mCy" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="89c-cs-5O0"/>
                 <constraint firstItem="PgY-F6-R3d" firstAttribute="top" secondItem="wR9-gc-ZJw" secondAttribute="bottom" constant="6" id="AgA-sB-Xc9"/>
+                <constraint firstItem="Ts0-sN-bEO" firstAttribute="top" secondItem="KQY-hL-vYh" secondAttribute="bottom" constant="30" id="Epe-fA-VLF"/>
                 <constraint firstItem="chE-Y0-ZTg" firstAttribute="centerY" secondItem="wR9-gc-ZJw" secondAttribute="centerY" id="Ggf-7W-1JV"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tWG-Cp-mCy" secondAttribute="trailing" constant="12" id="H72-Of-mei"/>
                 <constraint firstItem="PgY-F6-R3d" firstAttribute="width" secondItem="wR9-gc-ZJw" secondAttribute="width" id="Huu-nz-0pS"/>
                 <constraint firstItem="PgY-F6-R3d" firstAttribute="leading" secondItem="wR9-gc-ZJw" secondAttribute="leading" id="LRr-cK-jZs"/>
+                <constraint firstItem="w0R-lb-l7Q" firstAttribute="leading" secondItem="KQY-hL-vYh" secondAttribute="trailing" id="O4j-jA-Mkx"/>
                 <constraint firstItem="KQY-hL-vYh" firstAttribute="top" secondItem="PgY-F6-R3d" secondAttribute="bottom" constant="6" id="OlU-Hx-bZf"/>
-                <constraint firstItem="Ts0-sN-bEO" firstAttribute="leading" secondItem="JDZ-tu-a5F" secondAttribute="trailing" constant="20" id="Umm-RH-gWY"/>
+                <constraint firstItem="w0R-lb-l7Q" firstAttribute="centerY" secondItem="KQY-hL-vYh" secondAttribute="centerY" id="QmG-Av-ZUj"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w0R-lb-l7Q" secondAttribute="trailing" constant="10" id="RQK-M3-zyN"/>
                 <constraint firstAttribute="trailing" secondItem="chE-Y0-ZTg" secondAttribute="trailing" priority="750" constant="12" id="WG2-bp-iZh"/>
-                <constraint firstItem="JDZ-tu-a5F" firstAttribute="top" secondItem="KQY-hL-vYh" secondAttribute="bottom" constant="30" id="ZQQ-Yw-9mi"/>
                 <constraint firstItem="xgP-0S-ieR" firstAttribute="leading" secondItem="Ts0-sN-bEO" secondAttribute="trailing" constant="20" id="aJk-R8-yv6"/>
-                <constraint firstItem="JDZ-tu-a5F" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="cZS-Dl-RGA"/>
-                <constraint firstItem="8wt-rf-Xr9" firstAttribute="centerY" secondItem="KQY-hL-vYh" secondAttribute="centerY" id="f5G-f9-jyX"/>
+                <constraint firstItem="Ts0-sN-bEO" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="dUW-zI-9Ks"/>
                 <constraint firstItem="chE-Y0-ZTg" firstAttribute="leading" secondItem="wR9-gc-ZJw" secondAttribute="trailing" id="gff-8N-bSv"/>
-                <constraint firstItem="naI-ec-dgQ" firstAttribute="centerY" secondItem="JDZ-tu-a5F" secondAttribute="centerY" id="jpB-SP-54W"/>
                 <constraint firstItem="pGv-TG-TbE" firstAttribute="centerY" secondItem="PgY-F6-R3d" secondAttribute="centerY" id="lCO-5G-n4n"/>
                 <constraint firstItem="wR9-gc-ZJw" firstAttribute="top" secondItem="tWG-Cp-mCy" secondAttribute="bottom" constant="10" id="lV8-zW-e7x"/>
-                <constraint firstItem="Ts0-sN-bEO" firstAttribute="centerY" secondItem="JDZ-tu-a5F" secondAttribute="centerY" id="nu7-rf-uTS"/>
                 <constraint firstItem="naI-ec-dgQ" firstAttribute="leading" secondItem="xgP-0S-ieR" secondAttribute="trailing" constant="5" id="oRx-ZU-zvG"/>
-                <constraint firstItem="8wt-rf-Xr9" firstAttribute="leading" secondItem="KQY-hL-vYh" secondAttribute="trailing" id="tIh-t7-hqG"/>
                 <constraint firstItem="KQY-hL-vYh" firstAttribute="leading" secondItem="wR9-gc-ZJw" secondAttribute="leading" id="tkm-0q-4U6"/>
                 <constraint firstItem="tWG-Cp-mCy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="wvw-HG-BIu"/>
                 <constraint firstItem="pGv-TG-TbE" firstAttribute="leading" secondItem="PgY-F6-R3d" secondAttribute="trailing" id="yJl-VN-TWB"/>
             </constraints>
-            <point key="canvasLocation" x="-1170" y="178"/>
+            <point key="canvasLocation" x="-1395.5" y="178"/>
         </customView>
     </objects>
 </document>
