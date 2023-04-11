@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="nameLabel" destination="tWG-Cp-mCy" id="L5e-w5-9hb"/>
                 <outlet property="pathLabel" destination="8wt-rf-Xr9" id="4qz-la-DZq"/>
+                <outlet property="popupButton" destination="xgP-0S-ieR" id="h0F-Wy-Dkp"/>
                 <outlet property="ptypeLabel" destination="pGv-TG-TbE" id="fSY-Zh-CaU"/>
                 <outlet property="remarkLabel" destination="chE-Y0-ZTg" id="gCk-DL-svm"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -87,14 +88,49 @@
                     </constraints>
                     <buttonCell key="cell" type="push" title="复制路径" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Cy-5F-Jqq">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
                         <action selector="onClickCopyPath:" target="-2" id="Y19-Bz-pzF"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-sN-bEO">
+                    <rect key="frame" x="97" y="106" width="114" height="32"/>
+                    <buttonCell key="cell" type="push" title="打开工程目录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kHn-Q6-NFa">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onClickFinder:" target="-2" id="Hae-hW-S5G"/>
+                    </connections>
+                </button>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-0S-ieR">
+                    <rect key="frame" x="221" y="109" width="78" height="25"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" selectedItem="hRN-4V-Bth" id="VEZ-mf-saj">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <menu key="menu" id="FHy-7G-Xpb">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="hRN-4V-Bth"/>
+                                <menuItem title="Item 2" id="RPH-lZ-qUo"/>
+                                <menuItem title="Item 3" id="nCf-ic-NIz"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="naI-ec-dgQ">
+                    <rect key="frame" x="293" y="106" width="61" height="32"/>
+                    <buttonCell key="cell" type="push" title="打开" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rqt-ck-2dJ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onClickProject:" target="-2" id="6ur-aL-qJG"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="xgP-0S-ieR" firstAttribute="centerY" secondItem="JDZ-tu-a5F" secondAttribute="centerY" id="2oQ-Rc-TLA"/>
                 <constraint firstItem="KQY-hL-vYh" firstAttribute="width" secondItem="wR9-gc-ZJw" secondAttribute="width" id="57J-dS-uUC"/>
                 <constraint firstItem="wR9-gc-ZJw" firstAttribute="leading" secondItem="tWG-Cp-mCy" secondAttribute="leading" id="62o-kQ-zp6"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8wt-rf-Xr9" secondAttribute="trailing" id="7jB-bc-wDs"/>
@@ -105,19 +141,24 @@
                 <constraint firstItem="PgY-F6-R3d" firstAttribute="width" secondItem="wR9-gc-ZJw" secondAttribute="width" id="Huu-nz-0pS"/>
                 <constraint firstItem="PgY-F6-R3d" firstAttribute="leading" secondItem="wR9-gc-ZJw" secondAttribute="leading" id="LRr-cK-jZs"/>
                 <constraint firstItem="KQY-hL-vYh" firstAttribute="top" secondItem="PgY-F6-R3d" secondAttribute="bottom" constant="6" id="OlU-Hx-bZf"/>
+                <constraint firstItem="Ts0-sN-bEO" firstAttribute="leading" secondItem="JDZ-tu-a5F" secondAttribute="trailing" constant="20" id="Umm-RH-gWY"/>
                 <constraint firstAttribute="trailing" secondItem="chE-Y0-ZTg" secondAttribute="trailing" priority="750" constant="12" id="WG2-bp-iZh"/>
                 <constraint firstItem="JDZ-tu-a5F" firstAttribute="top" secondItem="KQY-hL-vYh" secondAttribute="bottom" constant="30" id="ZQQ-Yw-9mi"/>
+                <constraint firstItem="xgP-0S-ieR" firstAttribute="leading" secondItem="Ts0-sN-bEO" secondAttribute="trailing" constant="20" id="aJk-R8-yv6"/>
                 <constraint firstItem="JDZ-tu-a5F" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="cZS-Dl-RGA"/>
                 <constraint firstItem="8wt-rf-Xr9" firstAttribute="centerY" secondItem="KQY-hL-vYh" secondAttribute="centerY" id="f5G-f9-jyX"/>
                 <constraint firstItem="chE-Y0-ZTg" firstAttribute="leading" secondItem="wR9-gc-ZJw" secondAttribute="trailing" id="gff-8N-bSv"/>
+                <constraint firstItem="naI-ec-dgQ" firstAttribute="centerY" secondItem="JDZ-tu-a5F" secondAttribute="centerY" id="jpB-SP-54W"/>
                 <constraint firstItem="pGv-TG-TbE" firstAttribute="centerY" secondItem="PgY-F6-R3d" secondAttribute="centerY" id="lCO-5G-n4n"/>
                 <constraint firstItem="wR9-gc-ZJw" firstAttribute="top" secondItem="tWG-Cp-mCy" secondAttribute="bottom" constant="10" id="lV8-zW-e7x"/>
+                <constraint firstItem="Ts0-sN-bEO" firstAttribute="centerY" secondItem="JDZ-tu-a5F" secondAttribute="centerY" id="nu7-rf-uTS"/>
+                <constraint firstItem="naI-ec-dgQ" firstAttribute="leading" secondItem="xgP-0S-ieR" secondAttribute="trailing" constant="5" id="oRx-ZU-zvG"/>
                 <constraint firstItem="8wt-rf-Xr9" firstAttribute="leading" secondItem="KQY-hL-vYh" secondAttribute="trailing" id="tIh-t7-hqG"/>
                 <constraint firstItem="KQY-hL-vYh" firstAttribute="leading" secondItem="wR9-gc-ZJw" secondAttribute="leading" id="tkm-0q-4U6"/>
                 <constraint firstItem="tWG-Cp-mCy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="wvw-HG-BIu"/>
                 <constraint firstItem="pGv-TG-TbE" firstAttribute="leading" secondItem="PgY-F6-R3d" secondAttribute="trailing" id="yJl-VN-TWB"/>
             </constraints>
-            <point key="canvasLocation" x="-1075" y="175"/>
+            <point key="canvasLocation" x="-1170" y="178"/>
         </customView>
     </objects>
 </document>

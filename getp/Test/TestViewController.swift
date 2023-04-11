@@ -19,7 +19,7 @@ class TestViewController: NSViewController {
     
     @IBAction func onClickExists(_ sender: NSButton) {
         do {
-            try SupportedApps.iTerm2.app.open(in: "/Users/niren/Desktop")
+            try SupportedApps.terminal.app.open(in: "/Users/niren/Desktop")
         } catch {
             print(error)
         }
@@ -27,6 +27,9 @@ class TestViewController: NSViewController {
     
     
     @IBAction func onClickOpenApp(_ sender: NSButton) {
-        
+        let desktop = FinderManager.shared.getDesktopPath()
+        print(desktop)
+        let userpath = FinderManager.shared.getLoginUserPath()
+        print(userpath)
     }
 }

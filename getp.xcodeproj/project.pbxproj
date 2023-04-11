@@ -22,6 +22,7 @@
 		37E4D26129DB1A1C0009925D /* getpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E4D26029DB1A1C0009925D /* getpTests.swift */; };
 		37E4D26B29DB1A1D0009925D /* getpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E4D26A29DB1A1D0009925D /* getpUITests.swift */; };
 		37E4D26D29DB1A1D0009925D /* getpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E4D26C29DB1A1D0009925D /* getpUITestsLaunchTests.swift */; };
+		9A2290C729E3BC9400129E9B /* FinderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2290C629E3BC9400129E9B /* FinderManager.swift */; };
 		9A411A7B29DE713D00CFDD7C /* PathExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A411A7A29DE713D00CFDD7C /* PathExt.swift */; };
 		9A411A7D29DE76F600CFDD7C /* ProjectsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A411A7C29DE76F600CFDD7C /* ProjectsExt.swift */; };
 		9A411A8429DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A411A8229DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift */; };
@@ -93,6 +94,7 @@
 		37E4D26629DB1A1C0009925D /* getpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = getpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E4D26A29DB1A1D0009925D /* getpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getpUITests.swift; sourceTree = "<group>"; };
 		37E4D26C29DB1A1D0009925D /* getpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A2290C629E3BC9400129E9B /* FinderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderManager.swift; sourceTree = "<group>"; };
 		9A411A7A29DE713D00CFDD7C /* PathExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExt.swift; sourceTree = "<group>"; };
 		9A411A7C29DE76F600CFDD7C /* ProjectsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsExt.swift; sourceTree = "<group>"; };
 		9A411A8229DEBCBA00CFDD7C /* ProjectsDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsDetailHeaderViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				37E4D24E29DB1A1A0009925D /* AppDelegate.swift */,
 				37E4D25029DB1A1A0009925D /* MainViewController.swift */,
 				9A8DDD2229DC07650010F845 /* GetpManager.swift */,
+				9A2290C829E3D83C00129E9B /* Preference */,
 				9A93503829DFB50700FAA151 /* Test */,
 				3765514629DF15FC0071A9BC /* Components */,
 				3765513C29DF0C8B0071A9BC /* Convenience */,
@@ -253,6 +256,21 @@
 				37E4D26C29DB1A1D0009925D /* getpUITestsLaunchTests.swift */,
 			);
 			path = getpUITests;
+			sourceTree = "<group>";
+		};
+		9A2290C529E3BC8900129E9B /* Finder */ = {
+			isa = PBXGroup;
+			children = (
+				9A2290C629E3BC9400129E9B /* FinderManager.swift */,
+			);
+			path = Finder;
+			sourceTree = "<group>";
+		};
+		9A2290C829E3D83C00129E9B /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Preference;
 			sourceTree = "<group>";
 		};
 		9A8DDCF729DBCA0D0010F845 /* ToolBar */ = {
@@ -354,6 +372,7 @@
 		9A93504E29DFF65400FAA151 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9A2290C529E3BC8900129E9B /* Finder */,
 				9A93504F29DFF65C00FAA151 /* Error */,
 				9A93504929DFF17800FAA151 /* Script */,
 				9A93503D29DFBB5600FAA151 /* ApplicationCore */,
@@ -457,7 +476,7 @@
 				Base,
 			);
 			mainGroup = 37E4D24229DB1A1A0009925D;
-			productRefGroup = 37E4D24229DB1A1A0009925D /* Products */;
+			productRefGroup = 37E4D24229DB1A1A0009925D;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -514,6 +533,7 @@
 				9A8DDD3329DC234C0010F845 /* ProjectModel.swift in Sources */,
 				9A93504D29DFF38000FAA151 /* ScriptFactory.swift in Sources */,
 				9A93504729DFF10800FAA151 /* Terminal.swift in Sources */,
+				9A2290C729E3BC9400129E9B /* FinderManager.swift in Sources */,
 				9A8DDD3129DC23390010F845 /* ProjectsHandler.swift in Sources */,
 				9A93503B29DFB51600FAA151 /* TestViewController.swift in Sources */,
 				3765514E29DF16680071A9BC /* TipViewController.swift in Sources */,

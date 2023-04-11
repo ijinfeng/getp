@@ -22,6 +22,17 @@ public enum SupportedApps: String, CaseIterable {
         self.rawValue
     }
     
+    public var shortName: String {
+        switch self {
+        case .iTerm2, .terminal, .xcode, .textedit:
+            return self.rawValue
+        case .vscode:
+            return "VSCode"
+        case .androidStudio:
+            return "AndroidStudio"
+        }
+    }
+    
     public var type: AppType {
         switch self {
         case .terminal, .iTerm2:
@@ -34,6 +45,15 @@ public enum SupportedApps: String, CaseIterable {
     public static func isSupported(_ app: App) -> Bool {
         for sa in SupportedApps.allCases {
             if sa.name == app.name {
+                return true
+            }
+        }
+        return false
+    }
+    
+    public static func isSupported(_ name: String) -> Bool {
+        for sa in SupportedApps.allCases {
+            if sa.name == name || sa.shortName == name {
                 return true
             }
         }
@@ -54,6 +74,10 @@ public enum SupportedApps: String, CaseIterable {
         return SupportedApps.allCases.filter {
             $0.type == .editor
         }
+    }
+    
+    public static func app(createname: String) -> App? {
+        return nil
     }
     
     public var bundleIdentifier: String {
