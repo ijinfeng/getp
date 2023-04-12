@@ -64,6 +64,19 @@ public enum SupportedApps: String, CaseIterable {
         app.name == supported.name
     }
     
+    public static func createApp(with name: String) -> App? {
+        let support = isSupported(name)
+        if !support {
+            return nil
+        }
+        for sa in SupportedApps.allCases {
+            if sa.name == name || sa.shortName == name {
+                return sa.app
+            }
+        }
+        return nil
+    }
+    
     public static var terminals: [SupportedApps] {
         return SupportedApps.allCases.filter {
             $0.type == .terminal
@@ -74,10 +87,6 @@ public enum SupportedApps: String, CaseIterable {
         return SupportedApps.allCases.filter {
             $0.type == .editor
         }
-    }
-    
-    public static func app(createname: String) -> App? {
-        return nil
     }
     
     public var bundleIdentifier: String {
@@ -95,6 +104,9 @@ public enum SupportedApps: String, CaseIterable {
         NSWorkspace.shared.urlForApplication(withBundleIdentifier: self.bundleIdentifier)?.relativePath
     }
     
+    public var installed: Bool {
+        path?.isEmpty == false
+    }
     
     public var app: App {
         App(name: self.name, bid: self.bundleIdentifier, type: self.type, path: self.path)

@@ -22,4 +22,13 @@ public class FinderManager {
     public func getLoginUserPath() -> String {
         NSHomeDirectory()
     }
+    
+    public func open(at path: String? = ".") throws {
+        var openCommand = ScriptManager.commandFactory.getOpenCommand()
+        if let path = path {
+            openCommand += " " + path.specialCharEscaped(2)
+        }
+        let source = ScriptManager.commandFactory.getDoShellScript(openCommand)
+        try ScriptManager.shared.excute(source)
+    }
 }

@@ -9,13 +9,12 @@ import Foundation
 
 
 enum ProjectType {
-    case unknown
+    case other
     case apple
     case flutter
 }
 
 enum FileType {
-    case unknown
     case file
     case directory
 }
@@ -24,8 +23,8 @@ class ProjectModel {
     let name: String
     let path: String
     var remark: String?
-    private(set) var  ptype: ProjectType = .unknown
-    private(set) var  ftype: FileType = .unknown
+    private(set) var  ptype: ProjectType = .other
+    private(set) var  ftype: FileType = .file
     
     init(path: String) {
         self.path = path
@@ -49,3 +48,5 @@ class ProjectModel {
         }
     }
 }
+
+

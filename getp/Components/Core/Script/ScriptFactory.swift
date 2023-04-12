@@ -11,6 +11,7 @@ public class ScriptFactory {}
 
 public protocol TerminalCommand {
     func getOpenCommand(_ app: App, escapeCount: Int) -> String
+    func getOpenCommand() -> String
 }
 
 public protocol AppleScriptCommand {
@@ -22,6 +23,10 @@ public protocol AppleScriptCommand {
 extension ScriptFactory: TerminalCommand {
     public func getOpenCommand(_ app: App, escapeCount: Int = 1) -> String {
         "open -a \(app.name.nameSpaceEscaped(escapeCount))"
+    }
+    
+    public func getOpenCommand() -> String {
+        "open"
     }
 }
 

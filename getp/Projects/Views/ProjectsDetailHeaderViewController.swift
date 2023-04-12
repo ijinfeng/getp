@@ -19,6 +19,10 @@ class ProjectsDetailHeaderViewController: NSViewController {
     
     @IBOutlet weak var popupButton: NSPopUpButton!
     
+    private var terminals: [SupportedApps] = []
+    private var editors: [SupportedApps] = []
+    
+    private var invaildPopup = false;
     
     public var model: ProjectModel? {
         didSet {
@@ -27,13 +31,17 @@ class ProjectsDetailHeaderViewController: NSViewController {
                 remarkLabel.stringValue = model.remark ?? ""
                 pathLabelButton.title = model.path
                 
-                var items = ["终端", "VSCode"]
+                var items: [String] = []
                 if model.ptype == .apple {
                     ptypeLabel.stringValue = "apple"
-                    items.append("Xcode")
+                    if editors.contains(.xcode) {
+                        items.append(SupportedApps.xcode.name)
+                    }
                 } else if model.ptype == .flutter {
                     ptypeLabel.stringValue = "flutter"
-                    items.append("Android Studio")
+                    if editors.contains(.androidStudio) {
+                        items.append(SupportedApps.androidStudio.name)
+                    }
                 } else {
                     if model.ftype == .directory {
                         ptypeLabel.stringValue = "目录"
@@ -43,20 +51,40 @@ class ProjectsDetailHeaderViewController: NSViewController {
                         ptypeLabel.stringValue = "未知"
                     }
                 }
-                popupButton.addItems(withTitles: items)
-                if model.ptype == .apple {
-                    popupButton.selectItem(at: 2)
-                } else if model.ptype == .flutter {
-                    popupButton.selectItem(at: 1)
-                } else {
-                    popupButton.selectItem(at: 1)
+                if terminals.contains(.iTerm2) {
+                    items.append(SupportedApps.iTerm2.name)
+                } else if terminals.contains(.terminal) {
+                    items.append(SupportedApps.terminal.name)
                 }
+                if editors.contains(.vscode) {
+                    items.append(SupportedApps.vscode.name)
+                }
+                if (items.isEmpty) {
+                    if editors.contains(.textedit) {
+                        items.append(SupportedApps.textedit.name)
+                    }
+                    if items.isEmpty {
+                        items.append("没有任何可用IDE")
+                        invaildPopup = true
+                    }
+                }
+                popupButton.addItems(withTitles: items)
+                popupButton.selectItem(at: 0)
             } 
         }
     }
     
     override func awakeFromNib() {
         popupButton.removeAllItems()
+        let _terminals = SupportedApps.terminals.filter { app in
+            return app.installed
+        }
+        terminals.append(contentsOf: _terminals)
+        
+        let _editors = SupportedApps.editors.filter({ $0.installed })
+        editors.append(contentsOf: _editors)
+        
+        invaildPopup = false
     }
     
     override func viewDidLoad() {
@@ -75,12 +103,17 @@ class ProjectsDetailHeaderViewController: NSViewController {
     
     
     @IBAction func onClickFinder(_ sender: NSButton) {
-        
+        let finder = FinderManager.shared
+        try? finder.open(at: model?.path ?? finder.getLoginUserPath())
     }
     
     @IBAction func onClickProject(_ sender: NSButton) {
+        guard !invaildPopup else {
+            return
+        }
         if let item = popupButton.selectedItem {
-            
+            let name = item.title
+            try? SupportedApps.createApp(with: name)?.open(in: model?.path)
         }
     }
 }

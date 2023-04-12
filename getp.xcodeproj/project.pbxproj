@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		370F1A4929E5B19300756CC0 /* CursorEnableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F1A4829E5B19300756CC0 /* CursorEnableButton.swift */; };
 		370F1A4B29E5B53E00756CC0 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F1A4A29E5B53E00756CC0 /* LinkButton.swift */; };
+		3726298B29E70496002DA946 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726298929E70496002DA946 /* PreferenceViewController.swift */; };
+		3726298C29E70496002DA946 /* PreferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3726298A29E70496002DA946 /* PreferenceViewController.xib */; };
 		3765513A29DF0C760071A9BC /* ToyBricksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765513829DF0C760071A9BC /* ToyBricksViewController.swift */; };
 		3765513B29DF0C760071A9BC /* ToyBricksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3765513929DF0C760071A9BC /* ToyBricksViewController.xib */; };
 		3765513F29DF0CB20071A9BC /* ConvenienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765513D29DF0CB20071A9BC /* ConvenienceViewController.swift */; };
@@ -79,6 +81,8 @@
 /* Begin PBXFileReference section */
 		370F1A4829E5B19300756CC0 /* CursorEnableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorEnableButton.swift; sourceTree = "<group>"; };
 		370F1A4A29E5B53E00756CC0 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
+		3726298929E70496002DA946 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
+		3726298A29E70496002DA946 /* PreferenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferenceViewController.xib; sourceTree = "<group>"; };
 		3765513829DF0C760071A9BC /* ToyBricksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyBricksViewController.swift; sourceTree = "<group>"; };
 		3765513929DF0C760071A9BC /* ToyBricksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToyBricksViewController.xib; sourceTree = "<group>"; };
 		3765513D29DF0CB20071A9BC /* ConvenienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,15 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		3726298829E70476002DA946 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				3726298929E70496002DA946 /* PreferenceViewController.swift */,
+				3726298A29E70496002DA946 /* PreferenceViewController.xib */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
 		3765513729DF0C500071A9BC /* ToyBricks */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +253,7 @@
 				37E4D24E29DB1A1A0009925D /* AppDelegate.swift */,
 				37E4D25029DB1A1A0009925D /* MainViewController.swift */,
 				9A8DDD2229DC07650010F845 /* GetpManager.swift */,
-				9A2290C829E3D83C00129E9B /* Preference */,
+				3726298829E70476002DA946 /* Preference */,
 				9A93503829DFB50700FAA151 /* Test */,
 				3765514629DF15FC0071A9BC /* Components */,
 				3765513C29DF0C8B0071A9BC /* Convenience */,
@@ -278,13 +291,6 @@
 				9A2290C629E3BC9400129E9B /* FinderManager.swift */,
 			);
 			path = Finder;
-			sourceTree = "<group>";
-		};
-		9A2290C829E3D83C00129E9B /* Preference */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Preference;
 			sourceTree = "<group>";
 		};
 		9A8DDCF729DBCA0D0010F845 /* ToolBar */ = {
@@ -506,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3726298C29E70496002DA946 /* PreferenceViewController.xib in Resources */,
 				3765514F29DF16680071A9BC /* TipViewController.xib in Resources */,
 				9A8DDD0329DBD3A70010F845 /* ProjectsListViewController.xib in Resources */,
 				3765514029DF0CB20071A9BC /* ConvenienceViewController.xib in Resources */,
@@ -565,6 +572,7 @@
 				9A93504329DFEA7300FAA151 /* App.swift in Sources */,
 				9A8DDD2A29DC1AF60010F845 /* LayoutExt.swift in Sources */,
 				3765513F29DF0CB20071A9BC /* ConvenienceViewController.swift in Sources */,
+				3726298B29E70496002DA946 /* PreferenceViewController.swift in Sources */,
 				370F1A4929E5B19300756CC0 /* CursorEnableButton.swift in Sources */,
 				9A8DDCFC29DBCA560010F845 /* ToolBarViewController.swift in Sources */,
 				37E4D25129DB1A1A0009925D /* MainViewController.swift in Sources */,
