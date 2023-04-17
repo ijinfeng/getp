@@ -34,7 +34,6 @@ class ProjectsViewController: NSViewController {
         
         // left split view
         let leftViewController = ProjectsListViewController(nibName: "ProjectsListViewController", bundle: nil)
-        let leftView = leftViewController.view
         let left = NSSplitViewItem(viewController: leftViewController)
         left.minimumThickness = 120
         left.maximumThickness = 300
@@ -43,7 +42,6 @@ class ProjectsViewController: NSViewController {
         // right split view
         let rightViewController = ProjectDetailViewController(nibName: "ProjectDetailViewController", bundle: nil)
         detailViewController = rightViewController
-        let rightView = rightViewController.view
         let right = NSSplitViewItem(viewController: rightViewController)
         splitViewController.addSplitViewItem(right)
     }

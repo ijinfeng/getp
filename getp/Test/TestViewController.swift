@@ -12,24 +12,23 @@ class TestViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        
+        let dataBase = ProjectDataBaseManager.shared;
+        dataBase.createDataBase()
+        dataBase.load()
     }
     
     
     
     @IBAction func onClickExists(_ sender: NSButton) {
-        do {
-            try SupportedApps.terminal.app.open(in: "/Users/niren/Desktop")
-        } catch {
-            print(error)
-        }
+        let dataBase = ProjectDataBaseManager.shared;
+        dataBase.readProjects()
     }
     
     
     @IBAction func onClickOpenApp(_ sender: NSButton) {
-        let desktop = FinderManager.shared.getDesktopPath()
-        print(desktop)
-        let userpath = FinderManager.shared.getLoginUserPath()
-        print(userpath)
+        let dataBase = ProjectDataBaseManager.shared;
+        let project = ProjectModel(path: "/Users/niren/Desktop/works")
+        project.remark = "我是一个备注"
+        dataBase.insertNewProject(project: project)
     }
 }

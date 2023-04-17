@@ -8,18 +8,18 @@
 import Foundation
 
 
-enum ProjectType {
+enum ProjectType: Int {
     case other
     case apple
     case flutter
 }
 
-enum FileType {
+enum FileType: Int {
     case file
     case directory
 }
 
-class ProjectModel {
+class ProjectModel: CustomDebugStringConvertible {
     let name: String
     let path: String
     var remark: String?
@@ -46,6 +46,18 @@ class ProjectModel {
                 break
             }
         }
+    }
+    
+    init(mo: ProjectMO) {
+        self.name = mo.name ?? ""
+        self.path = mo.path ?? ""
+        self.remark = mo.remark
+        self.ptype = ProjectType.init(rawValue: Int(mo.ptype)) ?? .other
+        self.ftype = FileType.init(rawValue: Int(mo.ftype)) ?? .file
+    }
+    
+    var debugDescription: String {
+        return "name: \(name)\npath: \(path)\nremark: \(remark ?? "nil")\nptype: \(ptype)\nftype: \(ftype)"
     }
 }
 

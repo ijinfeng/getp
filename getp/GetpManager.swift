@@ -23,7 +23,7 @@ class GetpManager {
     var pcase: GetpCase = .project {
         didSet {
             if pcase == .project {
-                projectHanlder.loadProjects()
+                
             } else if pcase == .tool {
                 
             }
@@ -31,4 +31,6 @@ class GetpManager {
     }
     
     let projectHanlder = ProjectsHandler()
+    
+    
 }

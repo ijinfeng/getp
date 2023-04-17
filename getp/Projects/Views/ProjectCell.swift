@@ -17,6 +17,10 @@ class ProjectCell: NSTableCellView {
     
     @IBOutlet weak var pathLabel: NSTextField!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
     
     public var model: ProjectModel? {
         didSet {
@@ -42,3 +46,4 @@ class ProjectCell: NSTableCellView {
         }
     }
 }
+

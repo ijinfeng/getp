@@ -18,6 +18,13 @@ class ProjectsListViewController: NSViewController {
         // Do view setup here.
         setupUI()
         listenViewDragging()
+        loadProjects()
+    }
+    
+    func loadProjects() {
+        GetpManager.shared.projectHanlder.loadProjects { [weak self] _ in
+            self?.tableView.reloadData()
+        }
     }
     
     func listenViewDragging() {
@@ -54,7 +61,11 @@ class ProjectsListViewController: NSViewController {
     }
     
     @objc private func onClickMenuDelete() {
-        print("点击删除")
+        let needToDeleteIndex = tableView.clickedRow
+        if let project = GetpManager.shared.projectHanlder.project(at: needToDeleteIndex) {
+            GetpManager.shared.projectHanlder.deleteProject(project: project)
+            tableView.reloadData()
+        }
     }
 }
 

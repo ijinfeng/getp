@@ -19,12 +19,17 @@ class ProjectsHandler {
         return projects.count
     }
     
-    public func loadProjects() {
+    public func loadProjects(_ block: (([ProjectModel]) -> Void)?) {
         guard !loaded else {
+            block?(self.projects)
             return
         }
-        // load projects
-        print("load projects")
+        let projectDB = ProjectDataBaseManager.shared
+        projectDB.load { [weak self] _ in
+            self?.loaded = true
+            self?.projects = projectDB.readProjects()
+            block?(self?.projects ?? [])
+        }
     }
     
     /// 添加项目
@@ -42,7 +47,26 @@ class ProjectsHandler {
         }
         let model = ProjectModel(path: path)
         projects.append(model)
+        let projectDB = ProjectDataBaseManager.shared
+        projectDB.insertNewProject(project: model)
         return true
+    }
+    
+    public func deleteProject(project: ProjectModel) {
+        projects.removeAll { model in
+            model.path == project.path
+        }
+        let projectDB = ProjectDataBaseManager.shared
+        projectDB.deleteProject(with: project.path)
+    }
+    
+    public func update(project: ProjectModel, remark: String?) {
+        guard project.remark != remark else {
+            return
+        }
+        project.remark = remark
+        let projectDB = ProjectDataBaseManager.shared
+        projectDB.updateProject(new: project)
     }
     
     public func project(at index: Int) -> ProjectModel? {

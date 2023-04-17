@@ -85,6 +85,8 @@ class ProjectsDetailHeaderViewController: NSViewController {
         editors.append(contentsOf: _editors)
         
         invaildPopup = false
+        
+        remarkLabel.delegate = self
     }
     
     override func viewDidLoad() {
@@ -115,5 +117,14 @@ class ProjectsDetailHeaderViewController: NSViewController {
             let name = item.title
             try? SupportedApps.createApp(with: name)?.open(in: model?.path)
         }
+    }
+}
+
+extension ProjectsDetailHeaderViewController: NSTextFieldDelegate {
+    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+        if commandSelector == #selector(insertNewline(_ :)) {
+            view.window?.makeFirstResponder(nil)
+        }
+        return false
     }
 }

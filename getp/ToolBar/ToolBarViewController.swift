@@ -71,8 +71,11 @@ class ToolBarViewController: NSViewController {
     
     
     @IBAction func onClickSetting(_ sender: Any) {
-        let test = PreferenceViewController(nibName: "PreferenceViewController", bundle: nil)
-        let window = NSWindow(contentViewController: test)
+        // TODO: test
+        let vc = TestViewController(nibName: "TestViewController", bundle: nil)
+        
+//        let vc = PreferenceViewController(nibName: "PreferenceViewController", bundle: nil)
+        let window = NSWindow(contentViewController: vc)
         window.title = "偏好设置"
         window.center()
         window.orderFront(nil)
